@@ -272,6 +272,10 @@ nav {
         bottom: 3rem;
         right: 4rem;
         pointer-events: auto;
+
+        #flecha-header {
+            rotate: 360deg;
+        }
     }
 }
 
@@ -494,13 +498,13 @@ nav {
 
         & p {
             margin-bottom: 2rem;
-            opacity: 0.8;
             max-width: 500px;
             line-height: 1.8;
             font-size: 1.1rem;
         }
 
         & .btn-arrow {
+            align-self: flex-start;
             img {
                 rotate: 180deg;
             }
@@ -534,6 +538,7 @@ nav {
         }
 
         & .btn-arrow {
+            align-self: flex-start;
             img {
                 rotate: 180deg;
             }
@@ -1678,7 +1683,7 @@ nav {
 
 .torn-paper {
     position: absolute;
-    bottom: -1px;
+    bottom: -8rem;
     left: 0;
     width: 100%;
     z-index: 20;
