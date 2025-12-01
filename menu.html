@@ -14,20 +14,28 @@
             <img src="assets/img/logo-logo.png" alt="Logo">
             <h1>SAVOIR</h1>
         </div>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>   
+
         <div class="links">
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
-            <a href="#">Menu</a>
+            <a href="menu.html">Menu</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
 
+
     <header class="hero-menu">
         <div class="title-menu">
             <h2>Our</h2>
-            <h1>MENU</h1>
+            <h1 class="main-title">MENU</h1>
         </div>
-        <img src="assets/img/plato-menu.png" class="placeholder-img" alt="">
+        <img src="assets/img/plato-menu.png" class="menu-hero-img" alt="">
     </header>
 
     <section class="menu-section">
@@ -147,7 +155,7 @@
         </div>
         <div class="repertoire-content">
             <div class="repertoire-image">
-                <img src="assets/img/plato-menu1.png" alt="Full Repertoire" class="placeholder-img">
+                <img src="assets/img/plato-menu1.1.png" alt="Full Repertoire" class="repertoire-dish-img">
                 <div class="image-overlay-text">
                     <h3>SOFRAT AL-MEZZE (سفرة المزة)</h3>
                     <p>A curated array of hot and cold Arabian delicacies, embodying the profound tradition of gracious
@@ -323,7 +331,7 @@
             </div>
 
             <div class="repertoire-image">
-                <img src="assets/img/plato-menu2.png" alt="Majestic Entrees" class="placeholder-img">
+                <img src="assets/img/plato-menu2.png" alt="Full Repertoire" class="repertoire-dish-img">
                 <div class="image-overlay-text">
                     <h3>AL-ATBAQ AL-RAISIYYAH (الأطباق الرئيسية)</h3>
                     <p>The culinary heart of the Levant and Maghreb. A selection of prime meats and fresh seafood,
@@ -334,7 +342,7 @@
 
         <div class="repertoire-content large-content">
             <div class="repertoire-image large-image">
-                <img src="assets/img/plato-menu3.png" alt="Beverages">
+                <img src="assets/img/plato-menu3.png" alt="Full Repertoire" class="repertoire-dish-img">
                 <div class="image-overlay-text">
                     <h3>AL-MASHRUBAT (المشروبات)</h3>
                     <p>A refined selection of regional and international libations, curated to enhance the intricate
@@ -481,10 +489,16 @@
                         <div class="price">17$</div>
                     </div>
                 </div>
+
+                <a href="contact.html" class="btn-arrow">
+                    Book a table
+                    <img src="assets/svg/flecha.svg" id="flecha-header" alt="Arrow">
+                </a>
+
             </div>
 
             <div class="repertoire-image">
-                <img src="assets/img/plato-menu4.png" alt="Desserts">
+                <img src="assets/img/plato-menu4.png" alt="Full Repertoire" class="repertoire-dish-img">
                 <div class="image-overlay-text">
                     <h3>AL-HALAWIYAT (الحلويات)</h3>
                     <p>A celebration of sweetness to conclude your feast. Traditional recipes passed down through
@@ -604,7 +618,7 @@
                         <li class="footer__links-item"><a href="index.html" class="footer__link">Home</a></li>
                         <li class="footer__links-item"><a href="team.html" class="footer__link">Team</a></li>
                         <li class="footer__links-item"><a href="#" class="footer__link">Menu</a></li>
-                        <li class="footer__links-item"><a href="#" class="footer__link">Contact</a></li>
+                        <li class="footer__links-item"><a href="contact.html" class="footer__link">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -622,6 +636,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
