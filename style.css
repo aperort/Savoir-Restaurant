@@ -1638,6 +1638,39 @@ nav {
     }
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    position: relative;
+
+    span {
+        width: 25px;
+        height: 2px;
+        background-color: var(--color-gold-light);
+        transition: all 0.3s ease;
+    }
+
+    &.active {
+        span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    }
+}
+
 /* =========================================
    RESPONSIVE
    ========================================= */
@@ -2229,34 +2262,4 @@ nav {
     }
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1001;
 
-    span {
-        width: 25px;
-        height: 2px;
-        background-color: var(--color-gold-light);
-        transition: all 0.3s ease;
-    }
-
-    &.active {
-        span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        span:nth-child(2) {
-            opacity: 0;
-        }
-
-        span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-    }
-}
