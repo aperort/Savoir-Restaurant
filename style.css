@@ -22,7 +22,7 @@
 :root {
     --color-bg: #1A1A1A;
     --color-gold-dark: #BFA86D;
-    --color-gold-light: #F5EFE6;
+    --color-gold-light: #f5efe6;
 
     --font-serif: 'Cinzel Decorative', serif;
     --font-script: 'Arabella', cursive;
@@ -125,7 +125,7 @@ img {
         width: 95%;
         max-width: 1400px;
         padding: 1rem 3rem;
-        background-color: rgba(26, 26, 26, 0.5);
+        background-color: rgba(26, 26, 26, 0.8);
         border: 1px solid var(--color-gold-light);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
@@ -217,6 +217,7 @@ nav {
 /* =========================================
    5. HERO SECTION
    ========================================= */
+
 .hero {
     display: flex;
     height: 100vh;
@@ -365,7 +366,7 @@ nav {
         background-image: url('assets/img/logo2-Photoroom2.png');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: clamp(50rem, 14.286rem + 95.238vw, 100rem);
         opacity: 0.05;
         z-index: 0;
         pointer-events: none;
@@ -555,7 +556,6 @@ nav {
 
     & .promise-logo {
         flex: 0 0 50%;
-        border: 1px solid var(--color-gold-light);
 
         & img {
             width: 100%;
@@ -606,7 +606,6 @@ nav {
 
                     .footer__logo-main {
                         font-family: var(--font-serif);
-                        font-size: 10rem;
                         font-weight: 700;
                         text-transform: uppercase;
                         color: #1A1A1A;
@@ -705,7 +704,7 @@ nav {
 
 .footer__logo-main {
     font-family: var(--font-serif);
-    font-size: 10rem;
+    font-size: clamp(4rem, -0.286rem + 11.429vw, 10rem);
     font-weight: 700;
     text-transform: uppercase;
     color: #1A1A1A;
@@ -880,19 +879,9 @@ nav {
                 margin-bottom: 2rem;
             }
 
-            .profile-social {
-                display: flex;
-                gap: 1.5rem;
-
-                img {
-                    width: 20px;
-                    height: 20px;
-                    transition: opacity 0.3s;
-                    cursor: pointer;
-
-                    &:hover {
-                        opacity: 1;
-                    }
+            .profile-arrow {
+                #mi-arrow{
+                    width: clamp(8rem, 3rem + 13.333vw, 15rem);
                 }
             }
         }
@@ -923,8 +912,8 @@ nav {
             }
 
             .profile-img-vertical-small {
-                flex: 0 0 300px;
-                height: 400px;
+                flex: 0 0 clamp(10rem, 3.75rem + 16.667vw, 18.75rem);
+                height: clamp(15rem, 7.857rem + 19.048vw, 25rem);
                 overflow: hidden;
 
                 img {
@@ -977,7 +966,7 @@ nav {
                     }
 
                     img {
-                        width: 9rem;
+                        width: clamp(6rem, 3.857rem + 5.714vw, 9rem);
                         transition: opacity 0.3s ease;
 
                         &:hover {
@@ -1043,6 +1032,7 @@ nav {
 /* =========================================
    14. MENU PAGE STYLES
    ========================================= */
+
 .hero-menu {
     display: flex;
     align-items: center;
@@ -1058,28 +1048,21 @@ nav {
 
         h2 {
             font-family: var(--font-script);
-            font-size: 2rem;
+            font-size: clamp(1.8rem, 1.657rem + 0.381vw, 2rem);
             font-weight: 500;
         }
 
         h1 {
             font-family: var(--font-serif);
-            font-size: 12rem;
+            font-size: clamp(6rem, 1.714rem + 11.429vw, 12rem);
             line-height: 1;
         }
-    }
-
-    .repertoire-dish-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
     }
 
     .menu-hero-img {
         flex: 0.8;
         width: auto;
-        height: 35rem;
+        height: clamp(15rem, 0.714rem + 38.095vw, 35rem);
         object-fit: contain;
 
         img {
@@ -1087,6 +1070,7 @@ nav {
             height: 100%;
         }
     }
+
 }
 
 .menu-section {
@@ -1310,13 +1294,6 @@ nav {
                             line-height: 1.4;
                         }
                     }
-
-                    .price {
-                        font-family: var(--font-sans);
-                        font-size: 1.1rem;
-                        font-weight: bold;
-                        color: var(--color-gold-light);
-                    }
                 }
             }
         }
@@ -1390,13 +1367,6 @@ nav {
                         font-weight: bold;
                         color: var(--color-gold-light);
                     }
-
-                    .price {
-                        font-family: var(--font-sans);
-                        font-size: 1.2rem;
-                        font-weight: bold;
-                        color: var(--color-gold-light);
-                    }
                 }
 
                 p {
@@ -1417,7 +1387,7 @@ nav {
     position: relative;
     z-index: 20;
     background-color: var(--color-bg);
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1429,7 +1399,7 @@ nav {
     .contact-hero-text {
         position: relative;
         z-index: 10;
-        margin-bottom: 20rem;
+        margin-bottom: 10rem;
 
         .contact-title {
             font-family: var(--font-serif);
@@ -1449,25 +1419,6 @@ nav {
             font-size: 2rem;
             color: var(--color-gold-light);
             font-weight: 500;
-        }
-    }
-
-    .torn-paper {
-        position: absolute;
-        bottom: -30rem;
-        left: 0;
-        width: 100%;
-        z-index: 20;
-        line-height: 0;
-
-        img {
-            width: 100%;
-            min-height: 850px;
-            height: 90vh;
-            display: block;
-            position: relative;
-            object-fit: cover;
-            object-position: center;
         }
     }
 }
@@ -1638,9 +1589,72 @@ nav {
     }
 }
 
+.flex-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 2rem 0rem;
+    img {
+        width: clamp(5.96rem, -6.926rem + 34.362vw, 24rem);
+        height: clamp(10.5rem, 6.571rem + 10.476vw, 16rem);
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+
+    span {
+        width: 25px;
+        height: 2px;
+        background-color: var(--color-gold-light);
+        transition: all 0.3s ease;
+    }
+
+    &.active {
+        span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    }
+}
+
+
 /* =========================================
    RESPONSIVE
    ========================================= */
+
+@media (max-width: 1450px) {
+    .team-section {
+        padding: 2rem 2rem;
+        gap: 1rem;
+
+        .profiles-row {
+            gap: 2rem;
+        }
+    }
+
+    .hero-menu {
+    padding: 0rem 4rem;
+}
+}
+
 @media (max-width: 1024px) {
 
     /* =========================================
@@ -1734,8 +1748,10 @@ nav {
         max-width: 400px;
     }
 
-    .team-section {
-        padding: 4rem 2rem;
+    .team-section{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2rem;
     }
 
     .profile-featured {
@@ -1778,6 +1794,11 @@ nav {
 
     .profile-text {
         align-items: center;
+        .profile-text {
+            .profile-bio {
+                width: 80%;
+            }
+        }
     }
 
     .ceo-section {
@@ -1969,6 +1990,12 @@ nav {
                 }
             }
         }
+    }
+
+    .team-section{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2rem;
     }
 
     .tea-section {
@@ -2172,11 +2199,6 @@ nav {
                                 font-size: 0.8rem;
                             }
                         }
-
-                        .price {
-                            font-size: 0.95rem;
-                            align-self: flex-end;
-                        }
                     }
                 }
             }
@@ -2229,34 +2251,3 @@ nav {
     }
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1001;
-
-    span {
-        width: 25px;
-        height: 2px;
-        background-color: var(--color-gold-light);
-        transition: all 0.3s ease;
-    }
-
-    &.active {
-        span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        span:nth-child(2) {
-            opacity: 0;
-        }
-
-        span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-    }
-}
